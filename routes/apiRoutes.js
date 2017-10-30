@@ -15,17 +15,17 @@ module.exports = function(app) {
   
 
   app.post("/api/friends", function(req, res) {
-     
-      var userInfo = req.body;
+
       var MINDIFF = 99999999;
-      var matchedIndex = -1; 
-      //friendData.push(userInfo);
+      var matchedIndex = -1;
+      console.log(req.body); 
+      
       for(var i=0;i<friendData.length;i++){
-        if(friendData[i].name !== userInfo.name && 
-           friendData[i].photo !== userInfo.photo){
+        if(friendData[i].name !== req.body.name && 
+           friendData[i].photo !== req.body.photo){
           var scoreDiff = 0;
           for(var j=0;j<10;j++){
-            scoreDiff += Math.abs(userInfo.scores[j] - friendData[i].scores[j]);
+            scoreDiff += Math.abs(parseInt(req.body.scores[j]) - friendData[i].scores[j]);
 
           }
           if(scoreDiff < MINDIFF){
@@ -36,12 +36,27 @@ module.exports = function(app) {
 
       }
       
-      friendData.push(userInfo);
+      var scoreArray = [];
+      for(var i=0;i < req.body.scores.length;i++){
+        scoreArray.push(parseInt(req.body.scores[i]));
+      }
+
+      console.log(scoreArray);
+      var newUserinfo = {
+        name:req.body.name,
+        photo:req.body.photo,
+        scores:scoreArray
+      };
+
+      console.log(newUserinfo);
+      friendData.push(newUserinfo);
+      
+      console.log(friendData);
       console.log(friendData[matchedIndex].name)
       console.log(friendData[matchedIndex].photo);
 
       res.json({name:friendData[matchedIndex].name,
-                image:friendData[matchedIndex].photo});
+                photo:friendData[matchedIndex].photo});
     
     
   });

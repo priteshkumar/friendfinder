@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+
+#photodiv{
+  padding-bottom:14px;
+}
+
+</style>
+
+</head>
+<body>
+<div class="container">
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="friendModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title text-center" id="gridSystemModalLabel">Modal title</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2" id="photodiv">
+          </div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>FriendFinder Survey</h1>
+      <hr>
+      <h2 class="text-center">Find Your BestBuddy!!!</h2>
+      <br>
+    </div>
+        
+    <div class="row">
+      <div class="col-lg-12">
+
+        <!-- Reservation Page -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">FriendFinder Questionnaire</h4>
+          </div>
+          <div class="panel-body">
+            
+            <form role="form">
+              
+              <div class="form-group">
+                <label for="username">Name</label>
+                <input type="text" class="form-control" id="username">
+              </div>
+              <div class="form-group">
+                <label for="userimg">Your image link</label>
+                <input type="text" class="form-control" id="userimg">
+              </div>
+              <hr/>
+              <br/>
+              <div class="form-group">
+                <label for="queryone">Do you like meeting new people...</label>
+                <select class="form-control" id="queryone">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="querytwo">Are you an introvert...</label>
+                <select class="form-control" id="querytwo">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="querythree">Do you like music...</label>
+                <select class="form-control" id="querythree">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="queryfour">You get relaxed doing outdoor adventures...</label>
+                <select class="form-control" id="queryfour">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="queryfive">You are goodlooking...</label>
+                <select class="form-control" id="queryfive">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="querysix">Do you enjoy wine...</label>
+                <select class="form-control" id="querysix">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="queryseven">You are always calm even in tough situations...</label>
+                <select class="form-control" id="queryseven">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="queryeight">You always help your friends...</label>
+                <select class="form-control" id="queryeight">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="querynine">You are very jovial,easygoing person...</label>
+                <select class="form-control" id="querynine">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="queryten">You always try to be yourself...</label>
+                <select class="form-control" id="queryten">
+                  <option>1(Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5(Strongly agree)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends Link</a> | <a href="https://github.com/priteshkumar/friendfinder">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    var buddyOb = {
+                    name:null,
+                    photo:null
+                  };
+
+
+    $('#friendModal').on('show.bs.modal', function (event) {
+    
+      var modal = $(this)
+      modal.find('.modal-title').text(buddyOb.name);
+      var $snapshotdiv = $('.modal-body #photodiv');
+      var $buddyimgdiv = $("<img>");
+      $buddyimgdiv.addClass("img-responsive");
+      $buddyimgdiv.attr("src",buddyOb.photo);
+      $snapshotdiv.append($buddyimgdiv);
+    
+    });
+
+    
+
+    $(".submit").on("click", function(event) {
+      event.preventDefault();
+
+      // Here we grab the form elements
+      var selections = [];
+      $("select").each(function(){
+        
+        selections.push(parseInt($(this).val()));
+        
+
+      });
+
+      var scorestring = "";
+      selections.forEach(function(item){
+        scorestring += item;
+      });
+
+      var newUser = {
+        "name": $("#username").val().trim(),
+        "photo": $("#userimg").val().trim(),
+        "scores":scorestring
+      };
+
+      console.log(newUser);
+
+      
+      
+      $.post("/api/friends", newUser,
+        function(data) {
+
+           console.log(data);
+           buddyOb.name = data.name;
+           buddyOb.photo = data.photo;
+
+          // Clear the form when submitting
+          $("#username").val("");
+          $("#userimg").val("");
+          $("select").val("");
+          $("#friendModal").modal();
+
+
+        });
+
+    });
+
+</script>

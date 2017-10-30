@@ -1,8 +1,8 @@
 
 var friendData = [
  {
-  "name":"Ahmed",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"ArminVanBuuren",
+  "photo":"http://www.billboard.com/files/media/Armin-van-buuren-live-sept-2016-billboard-1548.jpg",
   "scores":[
       5,
       1,
