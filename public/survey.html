@@ -201,9 +201,11 @@
                   };
 
 
+
     $('#friendModal').on('show.bs.modal', function (event) {
     
-      var modal = $(this)
+      var modal = $(this);
+      console.log(buddyOb.photo);
       modal.find('.modal-title').text(buddyOb.name);
       var $snapshotdiv = $('.modal-body #photodiv');
       var $buddyimgdiv = $("<img>");
@@ -213,7 +215,21 @@
     
     });
 
+
+
+    $('#friendModal').on('hide.bs.modal', function (event) {
     
+      console.log("modal hiding completed");
+      var modal = $(this);
+            
+      var $snapshotdiv = $('.modal-body #photodiv');
+      $snapshotdiv.empty();
+    
+    });
+
+
+
+    //$("#friendModal").modal();
 
     $(".submit").on("click", function(event) {
       event.preventDefault();

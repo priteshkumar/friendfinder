@@ -1,0 +1,26 @@
+var people = [
+	           {
+	           	name:"dmoskovitz",   
+	            image:"https://static01.nyt.com/images/2016/09/10/us/10fd-facebook_web1/10fd-facebook_web1-master768.jpg"
+	           },
+	           {
+               	 name:"bizstone", 
+                 image:"https://blogs-images.forbes.com/andrewcave/files/2014/06/670px-biz_stone-20080723.jpg?width=960"
+               },
+               {	
+				 name:"krose", 
+    			 image:"https://i.ytimg.com/vi/sLfiRnutFo8/maxresdefault.jpg"
+    		   },
+               {
+				name:"arubin",    
+				image:"http://www.androidguys.com/wp-content/uploads/2017/03/Andy-Rubin.jpg"
+			   },		
+			   {
+			   	name:"rdahl",   
+  				image:"http://nodejsblog.com/wp-content/uploads/2015/05/ryan_dahl.jpg"
+  			   },
+  			   {
+				name:"jresig", 
+   				image:"https://images-na.ssl-images-amazon.com/images/I/418PATFUuRL._UX250_.jpg"
+   			  }
+           ];
