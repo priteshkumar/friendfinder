@@ -8,29 +8,69 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 </head>
+<style>
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  background:#1e88e5;
+  color:white;
+  margin-bottom: 60px;  
+}
+
+#maincontainer{
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:auto;
+  margin-bottom: auto;
+  padding-top:15%;
+  
+ 
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #e3f2fd;
+}
+#pfooter{
+  padding-top:12px;
+}
+#footertext{
+  
+  color:midnightblue;
+}
+</style>
 <body>
 
-  <div class="container">
+  <div class="container" id="maincontainer">
 
-    <div class="jumbotron">
+    <div class="row">
+    <div class="col-md-12">
       <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Need Friend</h1>
       <hr>
-      <h2 class="text-center">Find your best buddy here!!</h2>
+      <h1 class="text-center">Find your best buddy here!!</h2>
       <br>
 
       <div class="text-center">
-        <a href="/survey"><button type="button" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-credit-card"></span> Take the survey</button></a>
+        <a href="/survey"><button type="button" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-heart"></span> Take the survey</button></a>
       </div>
 
     </div>
-
-    <footer class="footer">
+  </div>
+</div>
+    
+    <footer class="footer text-center">
       <div class="container">
-        <p><a href="/api/friends">API Friend Link</a></p>
+        <p id="pfooter"><a href="/api/friends" id="footertext"><h5><i><strong>API Friend Link<strong><i></h5></a></p>
       </div>
     </footer>
-
-  </div>
+   
+  
 
 
 </body>
