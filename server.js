@@ -6,7 +6,7 @@ var app = express();
 
 
 var PORT = process.env.PORT || 8080;
-
+console.log("hello");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
